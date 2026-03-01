@@ -26,7 +26,7 @@
 
     .container {
         width: 450px;
-        height: 1000px;
+        height: 1430px;
         margin-top: 10px;
         border-radius: 0.8em;
         background-color: #fff;
@@ -41,10 +41,16 @@
         border-top-left-radius: 0.8em;
         border-top-right-radius: 0.8em;
         height: 30vh;
-        background-color: red;
-    }
+        /* background-color: red; */
+        overflow: hidden;
+        object-fit: cover;
 
-    .coverphoto img {}
+    }
+    
+    .coverphoto img {
+     width: 100%;
+     height: auto;
+    }
 
     .profilepic {
         width: 150px;
@@ -57,6 +63,12 @@
         margin: 0 auto;
         left: 30px;
         top: 225px;
+    }
+
+    .profilepic img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
     }
 
     .titlename {
@@ -97,7 +109,7 @@
         right: 0;
         margin: 0 auto;
         top: 400px;
-        background-color: red;
+        /* background-color: red; */
     }
 
     .icons i {
@@ -115,6 +127,7 @@
         top: 480px;
         outline: 2px solid #3f3f3f;
         box-shadow: 0 0 1rem #333;
+        touch-action: pan-y;
     }
 
     .carousel input {
@@ -169,7 +182,7 @@
 
 .contact {
     position: absolute;
-    top: 1000px;
+    top: 1125px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -209,21 +222,95 @@
 }
 
 .showcase-card {
-    position: absolute;
-    width: 10em;
-    background-color: blue;
-    margin: 0 auto;
+    width: 12em;
+    border: 2px solid #333;
+    border-radius: 1em;
+    height: 20em;
+}
+
+.showcase-card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-card-body a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    padding-left: 5px;
+    background: #333;
+    border-radius: 1rem;
+    position:absolute;
+    top: 250px;
+    transition: all 0.3s ease-in-out;
+}
+
+.showcase-card-body a:hover {
+    transform: scale(1.1);
+}
+
+.showcase-card-body h5 {
+    text-align: center;
+}
+
+.showcase-card-body p {
+    padding: 5px;
+    width: 100px;
 }
 
 .card-display {
     width: 100%;
+    /* background-color: red; */
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    justify-content: space-around;
+    left: 0;
     position: absolute;
     top: 760px;
 }
 
+.footerimage {
+    width: 30%;
+    /* background-color: red; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 1300px;
+}
+
+.footerimage img {
+    width: 100%;
+    height: 100%;
+}
+/* .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0,0,0,0.5);
+    padding: 0.3em 0.6em;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.arrow:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.arrow-left {
+    left: 10px;
+}
+
+.arrow-right {
+    right: 10px;
+} */
 
 </style>
 
@@ -232,10 +319,10 @@
 
     <div class="container">
         <div class="coverphoto">
-            <img src="" alt="Cover">
+            <img src="./IMG_2239.jpg" alt="Cover">
         </div>
         <div class="profilepic">
-            <img src="" alt="Profile">
+            <img src="./Profile_avatar_placeholder_large.png" alt="Profile">
         </div>
         <div class="titlename">
             <h1>Nathaniel Baird</h1>
@@ -243,6 +330,7 @@
             <h4>Adelaide Ice Arena</h4>
             <br>
             <h6>Duty Manager | IT | Maintenance</h6>
+            <hr>
         </div>
         <div class="icons">
             <i class="bi bi-facebook"><a href="" target="_blank"></a></i>
@@ -251,6 +339,12 @@
             <i class="bi bi-tiktok"><a href="" target="_blank"></a></i>
         </div>
         <div class="carousel">
+
+            <!-- Arrows to help left and right -->
+            <!-- Left & Right Arrows -->
+            <!-- <div class="arrow arrow-left">&#10094;</div>
+            <div class="arrow arrow-right">&#10095;</div> -->
+
 
             <!-- Radio Buttons per slide -->
             <input type="radio" name="slides" id="slide1" checked>
@@ -284,29 +378,33 @@
         </div>
         
         <div class="card-display">
-        <div class="showcase-card">
-            <img src="" alt="">
-            <div class="showcase-card-body">
-                <h5>Websites</h5>
-                <p>ijaosidjaosijdoasijdoaisjdoaisjdoais. aosijdaosijdoasijdoaisjoij</p>
-                <a href="#">Website Link</a>
-            </div>
-            </div>
-            <!-- 2nd Card -->
             <div class="showcase-card">
-            <img src="" alt="">
-            <div class="showcase-card-body">
-                <h5>Websites</h5>
-                <p>ijaosidjaosijdoasijdoaisjdoaisjdoais. aosijdaosijdoasijdoaisjoij</p>
-                <a href="#">Website Link</a>
+                <img src="" alt="">
+                <div class="showcase-card-body">
+                    <h5>Websites</h5>
+                    <p>ijaosidjaosijdoasijdoaisjd. aosijdaosijdoasijdoaisjoij</p>
+                    <a href="#">Website Link</a>
+                </div>
+            </div>
+            <div class="showcase-card">
+                <img src="" alt="">
+                <div class="showcase-card-body">
+                    <h5>Websites</h5>
+                    <p>ijaosidjaosijdoasijdoaisjd. aosijdaosijdoasijdoaisjoij</p>
+                    <a href="#">Website Link</a>
+                </div>
             </div>
         </div>
-</div>
-        </div>
+
+        
 
         <div class="contact">
             <a href="tel:61+450415317">📞</a>
             <a href="sms:61+450415317">💬</a>
+        </div>
+
+        <div class="footerimage">
+            <img src="./icearenalogo.PNG" alt="businessend">
         </div>
         
 
@@ -317,8 +415,66 @@
 
 
 
+<!-- Java Script for Carousel Swiping -->
+
+<script>
+const slides = document.querySelectorAll('input[name="slides"]');
+const totalSlides = slides.length;
+let currentIndex = 0;
+
+const carousel = document.querySelector('.carousel');
+
+let startX = 0;
+let endX = 0;
+
+function showSlide(index) {
+    slides[index].checked = true;
+    currentIndex = index;
+}
+
+// Detect manual label click and sync index
+slides.forEach((slide, index) => {
+    slide.addEventListener('change', () => {
+        currentIndex = index;
+    });
+});
+
+// Touch start
+carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+});
+
+// Touch end
+carousel.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+});
+
+function handleSwipe() {
+    const threshold = 50; // minimum swipe distance
+
+    if (startX - endX > threshold) {
+        // Swipe Left → Next slide
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    } else if (endX - startX > threshold) {
+        // Swipe Right → Previous slide
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        showSlide(currentIndex);
+    }
+}
+</script>
 
 </body>
 
 </html>
 
+<!-- 
+
+star
+star
+moon
+sun
+
+
+-->
